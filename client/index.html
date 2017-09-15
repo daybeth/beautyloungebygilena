@@ -16,8 +16,7 @@
 	<script src='my_angular/config.js'></script>
 	<script src='my_angular/UserFactory.js'></script>
 	<script src='my_angular/controller.js'></script>
-	<link rel="stylesheet" type="text/css" href='stylesheets/home.css'>
-	<link rel="stylesheet" type="text/css" href='stylesheets/navBar.css'>
+	<link rel="stylesheet" type="text/css" href='stylesheets/style.css'>
 	<link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake.min.css">
 	<link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake-slow.min.css">
 
@@ -27,28 +26,31 @@
 	 	padding: 0px;
 	}
     body{
-    	background: url("/images/banner.jpg") no-repeat center center fixed; 
+    	background: url("/images/banner1.jpg") no-repeat center center fixed; 
     	background-size: 100% 100%;
-
  	}
 
 	.navbar {
-	   background-color: transparent;
-	   padding-bottom: 0px;
+	    background-color: transparent;
+	    padding-bottom: 0px;
 		margin-bottom: 0px;
 		font-size: 1.3em;
 		padding-left:45%;
 	}
+	.navbar-nav a:hover{
+		background-color: #b5b5b5;
+	}
 	li{
-		/*padding-left: 5%;*/
 		width: 150px;
 		text-align: center;
-
 	}
 	hr{
 		width: 60%;
 		float: right;
 		margin-top: 0px;
+	}
+	#logo{
+		width: 30%;
 	}
 	</style>
 	<title>Beauty Lounge by Gilena</title>
@@ -62,7 +64,7 @@
 	  <div class="collapse navbar-collapse " id="navbarNavDropdown">
 	    <ul class="navbar-nav mx-auto">
 	      <li>
-	      	<a class="nav-link href="#">LOGO</a>
+	      	<div class="nav-link href="#"><img id="logo" src="/images/logo.jpg" alt="Logo"></div>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="#!/about">ABOUT</a>
@@ -73,8 +75,8 @@
         	</a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 	          <a class="dropdown-item" href="#!/facials">FACIAL</a>
-	          <a class="dropdown-item" href="#!/massages">MASSAGES</a>
 	          <a class="dropdown-item" href="#!/beautyBar">BEAUTY BAR</a>
+	          <a class="dropdown-item" href="#!/massages">MASSAGES</a>
 	          <a class="dropdown-item" href="#!/wax">WAX</a>
 	        </div>
 	      </li>

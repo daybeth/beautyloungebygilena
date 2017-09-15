@@ -1,0 +1,33 @@
+.brand-name{
+  width:35%;
+  margin-left:53%
+}
+
+.menu-image{
+  width: 35%;
+  margin: 2% 0% 0% 52.5%;
+}
+
+.menu-facials{
+  width: 65%;
+  margin: 4% 0% 0% 34%;
+}
+
+#about-container{
+  margin: 4% 0% 0% 52%;
+  background-color: #7d7d7d;
+  width: 35%;
+  color: white;
+  padding-top: 2%;
+}
+.title-container{
+  background-color:  #b5b5b5;
+  color: #7d7d7d;
+  height: 20%;
+  text-align: center;
+  padding: 2% 0% 4% 0%;
+  font-size: 4em;
+}
+.content{
+   padding: 2% 3%;
+}
