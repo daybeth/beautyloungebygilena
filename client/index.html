@@ -2,13 +2,20 @@
 <html lang="en" ng-app="app">
 <head>
 	<meta charset="UTF-8">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	<script type="text/javascript" src="angular/angular.js"></script>
 	<script type="text/javascript" src="angular-route/angular-route.js"></script>
-	<script type="text/javascript" src="js/angular.js"></script>
+	<script src="angular-material/angular-material.js"></script>
+	<script src="angular-carousel/dist/angular-carousel.js"></script>
+	<script src='my_angular/config.js'></script>
+	<script src='my_angular/UserFactory.js'></script>
+	<script src='my_angular/controller.js'></script>
 	<link rel="stylesheet" type="text/css" href='stylesheets/home.css'>
 	<link rel="stylesheet" type="text/css" href='stylesheets/navBar.css'>
 	<link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake.min.css">
@@ -20,17 +27,70 @@
 	 	padding: 0px;
 	}
     body{
-    	background-image: url("/images/grey_background.jpg");
-    	/*background-repeat: no-repeat;*/
-		width: auto;
-		height: auto;
+    	background: url("/images/banner.jpg") no-repeat center center fixed; 
+    	background-size: 100% 100%;
+
  	}
+
+	.navbar {
+	   background-color: transparent;
+	   padding-bottom: 0px;
+		margin-bottom: 0px;
+		font-size: 1.3em;
+		padding-left:45%;
+	}
+	li{
+		/*padding-left: 5%;*/
+		width: 150px;
+		text-align: center;
+
+	}
+	hr{
+		width: 60%;
+		float: right;
+		margin-top: 0px;
+	}
 	</style>
 	<title>Beauty Lounge by Gilena</title>
 </head>
 <body>
+	<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  
+	  <div class="collapse navbar-collapse " id="navbarNavDropdown">
+	    <ul class="navbar-nav mx-auto">
+	      <li>
+	      	<a class="nav-link href="#">LOGO</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#!/about">ABOUT</a>
+	      </li>
+	   	  <li class="nav-item dropdown">
+        	<a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          	MENU
+        	</a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	          <a class="dropdown-item" href="#!/facials">FACIAL</a>
+	          <a class="dropdown-item" href="#!/massages">MASSAGES</a>
+	          <a class="dropdown-item" href="#!/beautyBar">BEAUTY BAR</a>
+	          <a class="dropdown-item" href="#!/wax">WAX</a>
+	        </div>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#!/gallery">GALLERY</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#!/contact">CONTACT</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+	<hr>
 	<div ng-view="">
+	</div>
+	    
 
-    </div>
 </body>
 </html>
