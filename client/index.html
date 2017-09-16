@@ -26,7 +26,7 @@
 	 	padding: 0px;
 	}
     body{
-    	background: url("/images/banner1.jpg") no-repeat center center fixed; 
+    	background: url("/images/banner1-flipped.jpg") no-repeat center center fixed; 
     	background-size: 100% 100%;
  	}
 
@@ -34,8 +34,8 @@
 	    background-color: transparent;
 	    padding-bottom: 0px;
 		margin-bottom: 0px;
-		/*font-size: 1.3em;*/
-		padding-left:45%;
+		font-size: 1.3em;
+		/*padding-left:45%;*/
 	}
 	.navbar-nav a:hover{
 		background-color: #b5b5b5;
@@ -57,12 +57,12 @@
 </head>
 <body>
 	<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	  <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
 	  
 	  <div class="collapse navbar-collapse " id="navbarNavDropdown">
-	    <ul class="navbar-nav mx-auto">
+	    <ul class="navbar-nav mr-auto">
 	      <li>
 	      	<div class="nav-link href="#"><img id="logo" src="/images/logo.jpg" alt="Logo"></div>
 	      </li>
@@ -89,7 +89,7 @@
 	    </ul>
 	  </div>
 	</nav>
-	<hr>
+	<!-- <hr> -->
 	<div ng-view="">
 	</div>
 	    

@@ -1,20 +1,24 @@
 .brand-name{
   width:35%;
-  margin-left:53%
+  margin: 2% 0% 0% 10%;
+
+}
+.main-container{
+    /*text-align: center*/
 }
 
 .menu-image{
-  width: 35%;
-  margin: 2% 0% 0% 52.5%;
+  width: 50%;
+  margin: 2% 0% 0% 10%;
 }
 
 .menu-facials{
   width: 65%;
-  margin: 4% 0% 0% 34%;
+  margin: 4% 0% 0% 10%;
 }
 
 #about-container{
-  margin: 4% 0% 0% 52%;
+  margin: 4% 0% 0% 10%;
   background-color: #7d7d7d;
   width: 35%;
   color: white;
@@ -31,24 +35,22 @@
 .content{
    padding: 2% 3%;
 }
-html {
-  font-size: 14px;
-}
+
 
 @include media-breakpoint-up(sm) {
-  html {
-    font-size: 16px;
+  .navbar{
+    font-size: 0.9em;
   }
 }
 
 @include media-breakpoint-up(md) {
-  html {
-    font-size: 20px;
+ .navbar {
+    font-size: 1.1em;
   }
 }
 
 @include media-breakpoint-up(lg) {
-  html {
-    font-size: 28px;
+.navbar{
+    font-size: 1.3em;
   }
 }
