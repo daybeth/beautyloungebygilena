@@ -10,7 +10,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-    "dependencies": {
+  "dependencies": {
+    "angular-ui-carousel": "^0.1.10",
     "body-parser": "^1.17.1",
     "express": "^4.15.2"
   }

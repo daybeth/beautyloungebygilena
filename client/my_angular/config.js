@@ -1,4 +1,4 @@
-var app = angular.module('app', [ 'ngRoute']);
+var app = angular.module('app', [ 'ngRoute','ui.carousel']);
 /* configuration for angular route */
 app.config(function($routeProvider) {
   $routeProvider
@@ -34,4 +34,21 @@ app.config(function($routeProvider) {
       redirectTo: '/'
     });
 });
-
+app.run(['Carousel', (Carousel) => {
+  Carousel.setOptions({
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    cssEase: 'ease',
+    dots: true,
+ 
+    easing: 'linear',
+    fade: false,
+    infinite: true,
+    initialSlide: 0,
+ 
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 500,
+  });
+}]);

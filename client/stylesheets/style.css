@@ -1,6 +1,6 @@
 .brand-name{
   width:35%;
-  margin: 2% 0% 0% 10%;
+  margin: 2% 0% 0% 20%;
 
 }
 .main-container{
@@ -8,19 +8,19 @@
 }
 
 .menu-image{
-  width: 50%;
-  margin: 2% 0% 0% 10%;
+  width: 45%;
+  margin: 3% 0% 0% 15%;
 }
 
 .menu-facials{
-  width: 65%;
-  margin: 4% 0% 0% 10%;
+  width: 70%;
+  margin: 3% 0% 0% 2%;
 }
 
 #about-container{
-  margin: 4% 0% 0% 10%;
+  margin: 3% 0% 0% 15%;
   background-color: #7d7d7d;
-  width: 35%;
+  width: 45%;
   color: white;
   padding-top: 2%;
 }
@@ -54,3 +54,7 @@
     font-size: 1.3em;
   }
 }
+
+
+
+
