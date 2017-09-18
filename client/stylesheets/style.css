@@ -1,22 +1,15 @@
 .brand-name{
   width:35%;
   margin: 2% 0% 0% 20%;
-
 }
-.main-container{
-    /*text-align: center*/
-}
-
 .menu-image{
   width: 45%;
   margin: 3% 0% 0% 15%;
 }
-
 .menu-facials{
   width: 70%;
   margin: 3% 0% 0% 2%;
 }
-
 #about-container{
   margin: 3% 0% 0% 15%;
   background-color: #7d7d7d;
@@ -33,12 +26,21 @@
   font-size: 4em;
 }
 .content{
-   padding: 2% 3%;
+  padding: 2% 3%;
 }
+#carousel-main{
+  width: 80%;
+  height: 50%;
+}
+#slides_control{
+  width: 60%;
+}
+.carousel-image{
+  width: 100%
+}
+
 /*********NAV BAR*****/
-
-
-  .navbar {
+.navbar {
     background-color: #e5e4e4;
     padding-bottom: 0px;
     margin-bottom: 0px;
