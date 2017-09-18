@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="app" >
 <head>
 	<meta charset="UTF-8">
 	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script> -->
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="angular/angular.js"></script>
 	<script type="text/javascript" src="angular-route/angular-route.js"></script>
 	<script src="angular-material/angular-material.js"></script>
 	<script src="angular-touch/angular-touch.js"></script>
 	<script src="angular-carousel/dist/angular-carousel.js"></script>
 	<script src="angular-ui-carousel/dist/ui-carousel.js"></script>
+	<script src="angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
 	<script src='my_angular/config.js'></script>
 	<script src='my_angular/UserFactory.js'></script>
 	<script src='my_angular/controller.js'></script>
@@ -31,84 +35,49 @@
     	background: url("/images/banner1-flipped.jpg") no-repeat center center fixed; 
     	background-size: 100% 100%;
  	}
-
-	.navbar {
-	    background-color: #e5e4e4;
-	    padding-bottom: 0px;
-		margin-bottom: 0px;
-		font-size: 1.3em;
-		font-weight: bold;
-		
-	}
-	.navbar-nav a{
-		 margin-right: 10%;
-	}
-	.navbar a:hover {
-	  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
-	  -webkit-mask-size: 200%;
-	  animation: shine 2s infinite;
-	  border-bottom: 4px solid #b5b5b5;
-
-}
-
-@-webkit-keyframes shine {
-  from {
-    -webkit-mask-position: 150%;
-  }
-  
-  to {
-    -webkit-mask-position: -50%;
-  }
-}
-	.navbar li{
-		width: 150px;
-		text-align: center;
-		
-	}
-	#logo{
-		width: 35%;
-		margin: 0px;
-	}
 	</style>
+
 	<title>Beauty Lounge by Gilena</title>
 </head>
 <body>
-	<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
-	  
-	  <div class="collapse navbar-collapse " id="navbarNavDropdown">
-	    <ul class="navbar-nav mr-auto">
-	      <li>
-	      	<div class="nav-link href="#"><img id="logo" src="/images/logo.jpg" alt="Logo"></div>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="#!/about">ABOUT</a>
-	      </li>
-	   	  <li class="nav-item dropdown">
-        	<a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          	MENU
-        	</a>
-	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	          <a class="dropdown-item" href="#!/facials">FACIAL</a>
-	          <a class="dropdown-item" href="#!/beautyBar">BEAUTY BAR</a>
-	          <a class="dropdown-item" href="#!/massages">MASSAGES</a>
-	          <a class="dropdown-item" href="#!/wax">WAX</a>
-	        </div>
-	      </li>
-	      <li class="nav-item" >
-	        <a class="nav-link" href="#!/gallery">GALLERY</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="#!/contact">CONTACT</a>
-	      </li>
-	    </ul>
-	  </div>
+<div ng-controller="controller">
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<div class="navbar-brand" href="#"><img id="logo" src="/images/logo.jpg" alt="Logo"></div>
+		</div>
+		<div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
+			<ul class="nav navbar-nav">
+			  <li >
+		        <a href="#!/about">ABOUT</a>
+		      </li>
+		   	  <li uib-dropdown on-toggle="toggled(open)">
+	        	<a href id="simple-dropdown" uib-dropdown-toggle>MENU</a>
+		        <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+		          <li role="menuitem"><a href="#!/facials">FACIAL</a></li>
+		          <li role="menuitem"><a href="#!/beautyBar">BEAUTY BAR</a></li>
+		          <li role="menuitem"><a href="#!/massages">MASSAGES</a></li>
+		          <li role="menuitem"><a href="#!/wax">WAX</a></li>
+		        </ul>
+		      </li>
+		      <li  >
+		        <a href="#!/gallery">GALLERY</a>
+		      </li>
+		      <li >
+		        <a  href="#!/contact">CONTACT</a>
+		      </li>
+			</ul>
+		</div>
 	</nav>
-	<div ng-view="">
 	</div>
-	    
+	<div ng-view="">
+		
+	</div>
 
 </body>
 </html>
