@@ -13,7 +13,7 @@
 #about-container{
   margin: 3% 0% 0% 15%;
   background-color: #7d7d7d;
-  width: 45%;
+  width: 50%;
   color: white;
   padding-top: 2%;
 }
@@ -26,19 +26,45 @@
   font-size: 4em;
 }
 .content{
-  padding: 2% 3%;
+  padding: 2% 1%;
+}
+#brand-name-gallery{
+  padding: 0px;
+  margin: 2%;
 }
 #carousel-main{
   width: 80%;
   height: 50%;
 }
 #slides_control{
-  width: 60%;
+  width: 85%;
 }
 .carousel-image{
-  width: 100%
+  width: 80%;
+  height: 550px;
 }
-
+#map{
+  margin: 0% 1%;
+  width: 45%;
+  display: inline-block;
+}
+#contact-icon-box{
+  width: 52%;
+  display: inline-block;
+  vertical-align: top;
+}
+.contact-icon{
+  width: 40px; 
+  height: 40px;
+  margin-right: 10px;
+}
+.contact-text{
+  display: inline-block;
+  color: white;
+}
+.contact-link{
+  display: inline-block;
+}
 /*********NAV BAR*****/
 .navbar {
     background-color: #e5e4e4;
@@ -61,14 +87,11 @@
     -webkit-mask-size: 200%;
     animation: shine 2s infinite;
     border-bottom: 4px solid #b5b5b5;
-
   }
-
   @-webkit-keyframes shine {
     from {
       -webkit-mask-position: 150%;
     }
-    
     to {
       -webkit-mask-position: -50%;
     }
@@ -76,7 +99,6 @@
   .navbar li{
     width: 150px;
     text-align: center;
-    
   }
   #logo{
     width: 70%;

@@ -1,16 +1,17 @@
-<div>
-	<img class="brand-name" src="/images/name.jpg" alt="Beauty Bar Menu">
-       <div ng-controller="controller" id="slides_control">
-        <div id="carousel-main" >
-            <div uib-carousel interval="myInterval" active="activeSlide">
-                <div uib-slide ng-repeat="slide in slides" index="$index" class="carousel-box">
-                    <img ng-src="{{slide.image}}" style="margin:auto;" class="carousel-image">
-                    <div class="carousel-caption">
-                        <h4>Slide {{$index+1}}</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
+<center>
+	<div id="gallery-page">
+		<img class="brand-name" id="brand-name-gallery" src="/images/name.jpg" alt="Beauty Bar Menu">
+	       <div ng-controller="controller" id="slides_control">
+	        <div id="carousel-main" >
+	            <div uib-carousel interval="myInterval" active="activeSlide">
+	                <div uib-slide ng-repeat="slide in slides" index="$index" class="carousel-box">
+	                    <img ng-src="{{slide.image}}" style="margin:auto;" class="carousel-image">
+	                    <div class="carousel-caption">
+	                        <h4>Slide {{$index+1}}</h4>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</center>
