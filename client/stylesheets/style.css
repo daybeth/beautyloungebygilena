@@ -81,8 +81,9 @@ footer a{
 /*******END OF FOOTER*********/
 
 .brand-name{
-  width:35%;
+  width:30%;
   margin-top: 2%;
+  margin-bottom: 2%;
   display:block;
 }
 .menu-image{
@@ -229,11 +230,30 @@ vertical-align: middle;
 .service-box span{
   font-weight: bold;
   font-size: 1.1em;
-  /*font-style:2 oblique;*/
+}
+.title{
+  font-size: 3em;
+  margin: 3% 0%;
 }
 .service-content img{
-  width: 200px;
-  height: 220px;
+  width: 100%;
+  height: 250px;
+}
+.service-link{
+  width: 15%;
+  display: inline-block;
+  vertical-align: top;
+   margin-right: 
+   5%;
+}
+.service-link h1{
+  width: 100%;
+  height: 250px;
+  background-color: grey;
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  color: white;
+
 }
 
 /******END OF SERVICES PAGE*****/
@@ -259,12 +279,12 @@ vertical-align: middle;
 
 @media screen and (min-width: 1200px) {
      /* for-desktop-up */
-.brand-name{
+/*.brand-name{
   width:35%;
   margin-top: 2%;
   display:block;
-}
-.menu-image{
+}*/
+/*.menu-image{
   width: 45%;
    margin-top: 2%
 }
@@ -342,7 +362,7 @@ vertical-align: middle;
 .social-media{
   text-align: center;
   padding-bottom: 5%;
-}
+}*/
 
 }
 
@@ -419,7 +439,7 @@ vertical-align: middle;
 
 @media screen and (max-width: 599px) {
      /*for-phone-only */
-  img.brand-name{
+/*  img.brand-name{
     width:400px !important;
     margin-top: 10%;
   }
@@ -457,5 +477,17 @@ vertical-align: middle;
     text-align: center;
     padding-bottom: 5%;
   }
+*/
+}
 
+
+#test {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+#test:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
