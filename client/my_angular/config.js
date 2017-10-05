@@ -6,28 +6,52 @@ app.config(function($routeProvider) {
       templateUrl: '/partials/about.html',
       controller: 'controller'
     })
-     .when('/gallery', {
+    .when('/gallery', {
       templateUrl: '/partials/gallery.html',
       controller: 'controller'
     })
-      .when('/contact', {
+    .when('/contact', {
       templateUrl: '/partials/contact.html',
       controller: 'controller'
     })
-       .when('/facials', {
+     .when('/facials', {
       templateUrl: '/partials/facials.html',
       controller: 'controller'
     })
-      .when('/wax', {
+    .when('/wax', {
       templateUrl: '/partials/wax.html',
       controller: 'controller'
     })
-      .when('/beautyBar', {
+    .when('/beautyBar', {
       templateUrl: '/partials/beautyBar.html',
       controller: 'controller'
     })
-      .when('/massages', {
+    .when('/massages', {
       templateUrl: '/partials/massages.html',
+      controller: 'controller'
+    })
+    .when('/privacyPolicy', {
+      templateUrl: '/partials/privacyPolicy.html',
+      controller: 'controller'
+    })
+    .when('/services', {
+      templateUrl: '/partials/services.html',
+      controller: 'controller'
+    })
+    .when('/services-facials', {
+      templateUrl: '/partials/services-facials.html',
+      controller: 'controller'
+    })
+    .when('/services-wax', {
+      templateUrl: '/partials/services-wax.html',
+      controller: 'controller'
+    })
+    .when('/services-beautybar', {
+      templateUrl: '/partials/services-beautybar.html',
+      controller: 'controller'
+    })
+    .when('/services-massages', {
+      templateUrl: '/partials/services-massages.html',
       controller: 'controller'
     })
     .otherwise({
