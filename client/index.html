@@ -96,3 +96,15 @@
 
 </body>
 </html>
+<script>
+function showImage(imgName,desc,alt,title) {
+  var curImage = document.getElementById('currentImg');
+  var thePath = '';
+  var theSource = thePath + imgName; 
+  curImage.src = theSource;
+  curImage.alt = alt;
+  curImage.title = title;
+  var titleDiv = document.getElementById('imageDesc');
+	titleDiv.innerHTML = desc;
+};
+</script>
