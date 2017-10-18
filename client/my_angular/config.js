@@ -3,7 +3,7 @@ var app = angular.module('app', [ 'ngRoute','ui.carousel','angular-carousel','ui
 app.config(function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: '/partials/about.html',
+      templateUrl: '/partials/services.html',
       controller: 'controller'
     })
     .when('/gallery', {
@@ -34,8 +34,8 @@ app.config(function($routeProvider) {
       templateUrl: '/partials/privacyPolicy.html',
       controller: 'controller'
     })
-    .when('/services', {
-      templateUrl: '/partials/services.html',
+    .when('/about', {
+      templateUrl: '/partials/about.html',
       controller: 'controller'
     })
     .when('/services-facials', {
@@ -52,6 +52,10 @@ app.config(function($routeProvider) {
     })
     .when('/services-massages', {
       templateUrl: '/partials/services-massages.html',
+      controller: 'controller'
+    })
+    .when('/book', {
+      templateUrl: '/partials/book.html',
       controller: 'controller'
     })
     .otherwise({

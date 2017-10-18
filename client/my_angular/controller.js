@@ -9,10 +9,12 @@ app.controller('controller',['$scope', '$routeParams','UserFactory', function($s
   $scope.active = 0;
   $scope.microdermos = [
     {
-      image: '/images/images(2).jpg'
+      image: '/images/images(2).jpg',
+      text: '2 weeks later'
     },
     {
-      image: '/images/images.jpg'
+      image: '/images/images.jpg',
+      text: '2 hours later'
     },
     {
       image: '/images/images(3).jpg'
