@@ -1,10 +1,4 @@
 /*********NAV BAR*****/
-  .horizontal-collapse {
-    height: 70px;
-  }
-  .navbar-collapse.in {
-    overflow-y: hidden;
-  }
   .navbar {
 /*  background-color: #d1c7e2;*/
   padding-bottom: 0px;
@@ -39,9 +33,6 @@
   width: 120px;
   text-align: center;
 }
-.list-item{
-  width: 100px;
-}
 #logo{
   width: 70%;
   margin: 0px;
@@ -54,6 +45,9 @@
 }
 .navbar-collapse.in {
   overflow-y: hidden;
+}
+.collapse.in {
+    display: inline-block;
 }
 .navbar-brand{
   padding: 0px;
@@ -74,12 +68,17 @@
   padding-right: 0px !important;
   padding-left: 0px !important;
 }
-/*.vagaro-container.vagaro-popup-widget {
-   float: right;
-   left: 85%;
-}*/
+/*.vagaro-container.vagaro-popup-widget{
+  width: 120px;
+    height: 40px
+  }
+  #vagaro div {
+    }*/
 .vagaro-container.vagaro-popup-widget img{
-  height:50px;
+  position: absolute;
+  right: 2%;
+  /*left: 90%;*/
+  /*margin-top: -5%;*/
 }
 
 /********* END OF NAV BAR*****/
@@ -129,13 +128,51 @@ footer a{
   font-size: 5em;
   font-weight: bold;
 }
-#about-content{
-  padding: 5px 8%;
-}
 #brand-name-gallery{
   padding: 0px;
   margin: 2%;
 }
+#privacyPolicy-content{
+  padding: 2% 5%;
+  text-align: left;
+}
+/******ABOUT PAGE*****/
+#about-content{
+  padding: 5px 0px;
+}
+#vision{
+  padding: 3% 7% 0% 7%;
+}
+#profile{
+  margin-top: 5%;
+}
+#vision{
+  font-size: 1.2em;
+}
+#vision span{
+  font-style: italic;
+}
+#gilena-pic{
+  width: 20%;
+  border-radius: 50%;
+  display: inline-block;
+/*  margin-left: 0px;*/
+}
+#comment{
+  width: 65%;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0.9em;
+  text-align: left;
+  margin:0%  2%;
+}
+#comment span{
+  margin-left: 40%;
+  font-style: italic;
+}
+
+/******END OF ABOUT PAGE*****/
+
 /******GALLERY PAGE*****/
 #gallery{
   margin-top: 1%;
@@ -154,8 +191,7 @@ footer a{
   animation: shine 2s infinite;
 }
 #carousel-main{
-  width: 60%;
-  height: 50%;
+  width: 65%;
 }
 #slides_control{
   width: 85%;
@@ -216,6 +252,7 @@ margin: 5px 0px;
 /******SERVICES PAGE*****/
 .service-content{
   margin-top: 2%;
+  margin-left: 2%
 }
 #service1{
   display: inline;
@@ -228,7 +265,7 @@ margin: 5px 0px;
   height: 230px;
 }
 .service-link{
-  width: 15%;
+  width: 18%;
   display: inline-block;
   vertical-align: top;
   margin-right: 3%;
@@ -237,7 +274,8 @@ margin: 5px 0px;
   width: 100%;
   height: 230px;
   background: linear-gradient(to right, #757472 , #f3f2f4);
-  /*background-color: #757472;*/
+  font-weight: bold;
+  font-style: italic;
   margin-top: 0px;
   margin-bottom: 0px; 
   color: #e2dee5;
@@ -386,6 +424,17 @@ width:100%;
 
 @media only screen and (max-width: 700px) { 
      /*for-phone-only */
+  .navbar-default .navbar-nav>li>a{
+    padding: 5px;
+    width: 90px;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a{
+    margin-left: 0px;
+    width: 100px;
+  }
+   .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
+    width: 88px;
+  }
   img.brand-name {
     width:50% !important;
     margin-top: 5%;
@@ -576,10 +625,11 @@ width:100%;
   }
   #service1{
     display: block;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
   }
   .service-link{
-    width: 35%;
+    width: 30%;
+    margin-right: 3%
   }
    .service-link h3{
     font-size: 2em;
@@ -610,5 +660,31 @@ width:100%;
    #imageDesc p{
     font-size: 1em;
   }
+
+#vision{
+  padding: 3% 3% 0% 3%;
+  font-size: 1.5em;
+}
+#profile{
+  margin-top: 5%;
+}
+
+#gilena-pic{
+  width: 20%;
+  border-radius: 50%;
+
+}
+#comment{
+  width: 75%;
+  display: block;
+
+  font-size: 1.2em;
+  text-align: center;
+  margin-top:2%;
+}
+#comment span{
+  margin-left: 30%;
+  font-style: italic;
+}
 }
 

@@ -7,46 +7,59 @@ app.controller('controller',['$scope', '$routeParams','UserFactory', function($s
   $scope.myInterval = 5000;
   $scope.noWrapSlides = false;
   $scope.active = 0;
+  $scope.beforeAndAfters = [
+  {
+      image: '/images/ba-microneedling2.jpg',
+      text: 'Microneedling'
+    },
+    {
+      image: '/images/ba-microneedling.jpg',
+      text: 'Microneedling'
+    },
+    {
+      image: '/images/ba-microneedling3.jpg',
+      text: 'Microneedling'
+    },
+    {
+      image: '/images/ba-microneedling4.jpg',
+      text: 'Microneedling'
+    },
+    {
+      image: '/images/ba-.jpg',
+      text: ''
+    },
+    {
+      image: '/images/ba-1.jpg',
+      text: ''
+    },
+    {
+      image: '/images/ba-bodySculpting.jpg',
+      text: 'Body Sculpting'
+    },
+    {
+      image: '/images/ba-collagenInduction.jpg',
+      text: 'Collagen Induction Therapy'
+    },
+    {
+      image: '/images/ba-darkCircles.jpg',
+      text: 'Bye bye Dark Circles'
+    },
+    {
+      image: '/images/ba-eb-makeup.jpg',
+      text: 'Eyebrows Make up'
+    },
+    {
+      image: '/images/ba-microneedling5.jpg',
+      text: 'Microneedling'
+    }
+    ];
   $scope.microdermos = [
-    {
-      image: '/images/images(2).jpg',
-      text: '2 weeks later'
-    },
-    {
-      image: '/images/images.jpg',
-      text: '2 hours later'
-    },
-    {
-      image: '/images/images(3).jpg'
-    },
-    {
-      image: '/images/images(4).jpg'
-    },
-    {
-      image: '/images/images(1).jpg'
-    }
   ];
-    $scope.microneeds = [
-    {
-      image: '/images/ba-microneedling2.jpg'
-    },
-    {
-      image: '/images/ba-microneedling.jpg'
-    },
-    {
-      image: '/images/ba-microneedling3.jpg'
-    }
+  $scope.microneeds = [
+    
   ];
   $scope.teens = [
-    {
-      image: '/images/images(3).jpg'
-    },
-    {
-      image: '/images/images(4).jpg'
-    },
-    {
-      image: '/images/images(1).jpg'
-    }
+ 
   ];
 
 }])
