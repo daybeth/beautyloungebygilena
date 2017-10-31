@@ -1,5 +1,24 @@
 <center>
-<div>
+	 <section id="from-top">
+<div class="image-wrapper">
+	<div class="image image-set-animate"></div>
+	<div class="shape shape-set-animate"></div>
 	<img  class="menu-image" src="/images/beautyBar-menu.jpg" alt="Beauty Bar Menu">
 </div>
 </center>
+		</section>		
+<script>
+	$(document).ready(function(){
+	  $(window).scroll(function(){
+
+    var scrollTop = $(this).scrollTop();
+
+
+		if(scrollTop > $('#from-top').offset().top - ($(window).height() / 1.5 )){
+
+			$('#from-top').find('.image-wrapper').addClass('from-top');
+
+    }
+    });
+    });
+</script>
