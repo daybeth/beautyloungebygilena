@@ -142,7 +142,7 @@ footer a{
 }
 #vision{
   padding: 3% 7% 0% 7%;
-  font-size: 1.2em;
+  font-size: 1.em;
 }
 #profile{
   margin-top: 5%;
@@ -150,10 +150,12 @@ footer a{
 #vision span{
   font-style: italic;
 }
-#gilena-pic{
+.gilena-pic{
   width: 20%;
   border-radius: 50%;
   display: inline-block;
+  border:solid 2px white;
+  margin-top: 2%;
 }
 #comment{
   width: 70%;
@@ -161,34 +163,62 @@ footer a{
   vertical-align: top;
   font-size: 0.9em;
   text-align: left;
-  margin:0% 0% 2% 24%;
+  margin:2% 2%;
 }
 #comment span{
   margin-left: 40%;
   font-style: italic;
 }
- #gilena-pic {
-   width:135px;
-   height:135px;
-   background-color:transparent;
-   float:left;
-   margin-left:0px;
-   margin-top:0px;
-   border:solid 3px white;
-   cursor:pointer;
-   -webkit-transition: height .50s,width .50s;
- }
- #gilena-pic {
-  -webkit-animation: slidedown 1s;
-   -webkit-animation-fill-mode:forwards;
-   -webkit-animation-delay:.90s;
-   position:absolute;top:-200px;left:27%;
-   z-index:99;
- }
- @-webkit-keyframes slidedown {
-   100%{top:560px;}
- }
+.stage {
+    margin: 1em auto;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+  }  
+#spinner {
+  display: inline-block;
+  text-align:center;
+    -webkit-animation-name: spinner;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 15s;
 
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  #spinner:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+
+
+@-webkit-keyframes spinner {
+    from { -webkit-transform: rotateY(0deg);    }
+    to   { -webkit-transform: rotateY(-360deg); }
+  }
+
+  /* all other browsers */
+  @keyframes spinner {
+    from {
+      -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    to {
+      -moz-transform: rotateY(-360deg);
+      -ms-transform: rotateY(-360deg);
+      transform: rotateY(-360deg);
+    }
+  }
 /******END OF ABOUT PAGE*****/
 
 /******GALLERY PAGE*****/
@@ -283,7 +313,7 @@ margin: 5px 0px;
   height: 230px;
 }
 .pic{
-    width: 18%;
+  width: 18%;
   display: inline-block;
   vertical-align: top;
   margin-right: 3%;
@@ -744,22 +774,13 @@ figure {
   #profile{
     margin-top: 5%;
   }
-
-  #gilena-pic{
-    width: 20%;
-    border-radius: 50%;
-    position:absolute;top:-200px;left:42%;
-  }
-  @-webkit-keyframes slidedown {
-    100%{top:760px;}
-  }
   #comment{
     width: 75%;
     display: block;
     margin-left: 0px;
     font-size: 1.2em;
     text-align: center;
-    margin-top:30%;
+    margin-top:3%;
   }
   #comment span{
     margin-left: 30%;
@@ -767,39 +788,24 @@ figure {
   }
 }
 
-//FROM TOP
-.image-wrapper.from-top{
-  .image{
-    animation-name: fadeImageTop;
-    @include translate3d(0,-100%,0);
-  }
-
-  .shape{
-    animation-name: fadeShapeTop;
-  }
-}
-
-@keyframes fadeImageTop {
-  0%{
-    @include translate3d(0,-100%,0);
-  }
-  100%{
-    @include translate3d(0,0,0);
-  }
-}
-
-@keyframes fadeShapeTop {
-  0%{
-    width: 0;
-    height: 5px;
-  }
-  50%{
-    width: 100%;
-    height: 5px;
-  }
-  100%{
-    width: 100%;
-    height: 100%;
-  }
-}
-
+ #gilena-pic {
+   width:135px;
+   height:135px;
+   background-color:transparent;
+   float:left;
+   margin-left:0px;
+   margin-top:0px;
+   border:solid 3px white;
+   cursor:pointer;
+   -webkit-transition: height .50s,width .50s;
+ }
+ #gilena-pic {
+  -webkit-animation: slidedown 1s;
+   -webkit-animation-fill-mode:forwards;
+   -webkit-animation-delay:.90s;
+   position:absolute;top:-200px;left:27%;
+   z-index:99;
+ }
+ @-webkit-keyframes slidedown {
+   100%{top:560px;}
+ }
