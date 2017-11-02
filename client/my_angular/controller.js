@@ -1,4 +1,4 @@
-app.controller('controller',['$scope', '$routeParams','UserFactory', function($scope,$routeParams,UserFactory){
+app.controller('controller',['$scope', '$routeParams', function($scope,$routeParams){
 
   $scope.isNavCollapsed = true;
   $scope.isCollapsed = false;
