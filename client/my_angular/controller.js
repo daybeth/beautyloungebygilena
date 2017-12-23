@@ -25,6 +25,82 @@ app.controller('controller',['$scope', '$routeParams', function($scope,$routePar
       text: 'Microneedling'
     },
     {
+      image: '/images/ba-microneedling5.jpg',
+      text: 'Microneedling'
+    },
+    {
+      image: '/images/ba-ultherapy.jpg',
+      text: 'Ultherapy right after'
+    },
+    {
+      image: '/images/ba-ultherapy1.jpg',
+      text: 'Ultherapy right after'
+    },
+    {
+      image: '/images/ba-ultherapy30days.jpg',
+      text: 'Ultherapy 30 Days after'
+    },
+    {
+      image: '/images/ba-ultherapy30days1.jpg',
+      text: 'Ultherapy 30 Days after'
+    },
+    {
+      image: '/images/ba-ultherapy30days2.jpg',
+      text: 'Ultherapy 30 Days after'
+    },
+    {
+      image: '/images/ba-radiofrequency.jpg',
+      text: 'Radiofrequency'
+    },
+    {
+      image: '/images/ba-radiofrequency1.jpg',
+      text: 'Radiofrequency'
+    },
+    {
+      image: '/images/ba-radiofrequency2.jpg',
+      text: 'Radiofrequency'
+    },
+    {
+      image: '/images/ba-radiofrequency3.jpg',
+      text: 'Radiofrequency'
+    },
+    {
+      image: '/images/ba-radiofrequencyCavitation.jpg',
+      text: 'Radiofrequency and Cavitation'
+    },
+    {
+      image: '/images/ba-makeup.jpg',
+      text: 'Make up'
+    },
+    {
+      image: '/images/ba-lashesextension.jpg',
+      text: 'Lashes Extensions'
+    },
+    {
+      image: '/images/ba-lashesextension1.jpg',
+      text: 'Lashes Extensions'
+    },
+    {
+      image: '/images/ba-lashesextension2.jpg',
+      text: 'Lashes Extensions'
+    },
+    {
+      image: '/images/ba-lashesLifting.jpg',
+      text: 'Lashes Lifting'
+    },
+    {
+      image: '/images/ba-lashesLifting1.jpg',
+      text: 'Lashes Lifting'
+    },
+    {
+      image: '/images/ba-lashesLifting2.jpg',
+      text: 'Lashes Lifting'
+    },
+    {
+      image: '/images/ba-lashesLifting3.jpg',
+      text: 'Lashes Lifting'
+    },
+    {
       image: '/images/ba-.jpg',
       text: ''
     },
@@ -36,8 +112,16 @@ app.controller('controller',['$scope', '$routeParams', function($scope,$routePar
       image: '/images/ba-bodySculpting.jpg',
       text: 'Body Sculpting'
     },
+     {
+      image: '/images/ba-coldSculpting.jpg',
+      text: 'Cold Sculpting'
+    },
     {
       image: '/images/ba-collagenInduction.jpg',
+      text: 'Collagen Induction Therapy'
+    },
+     {
+      image: '/images/ba-collagenInduction2.jpg',
       text: 'Collagen Induction Therapy'
     },
     {
@@ -47,10 +131,6 @@ app.controller('controller',['$scope', '$routeParams', function($scope,$routePar
     {
       image: '/images/ba-eb-makeup.jpg',
       text: 'Eyebrows Make up'
-    },
-    {
-      image: '/images/ba-microneedling5.jpg',
-      text: 'Microneedling'
     }
     ];
   $scope.microdermos = [

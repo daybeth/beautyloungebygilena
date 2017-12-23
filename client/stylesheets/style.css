@@ -661,7 +661,7 @@ figure {
 @media only screen and (max-device-width: 600px) { 
      /*for-phone-only */
   .navbar li{
-    width: 180px;
+    width: 100px;
     text-align: center;
     font-size: 1.4em;
   }
