@@ -1,6 +1,8 @@
 # AngularJS Touch Carousel
 
-An AngularJS carousel implementation optimised for mobile devices.
+An AngularJS 1 carousel implementation optimised for mobile devices.
+
+**This project is not maintained anymore, and looking for maintainers.**
 
 Demo : http://revolunet.github.io/angular-carousel
 
@@ -60,6 +62,7 @@ angular.module('MyApp', ['angular-carousel']);
 
 ## Directive options :
  - `rn-carousel-index` two way binding integer to control the carousel position (0-indexed)
+ - `rn-rn-carousel-html-slides`: two way binding array to get slides if no ng-repeat was used (slides array)
  - `rn-carousel-buffered` add this attribute to enable the carousel buffering, good to minimize the DOM (5 slides)
  - `rn-carousel-controls` add this attribute to enable builtin prev/next buttons (you can override by CSS)
  - `rn-carousel-auto-slide` add this attribute to make the carousel slide automatically after given seconds (default=3)
@@ -78,7 +81,12 @@ You can add position indicators by adding this directive where you want :
 <div rn-carousel-indicators ng-if="slides.length > 1" slides="slides" rn-carousel-index="carouselIndex"></div>
 ```
  - `slides` is the same collection you use in the carousel ng-repeat
+
+Note: If loading in slides from an async service, the `ng-if="slides.length > 1"` may not update as expected. In this case, try `ng-if="slides"`.
+
  - `carouselIndex` is the same index you've defined for the carousel
+
+ Note: If the indicators don't seem to update with the slides, try binding to an object param i.e. `carousel.index`, set in the controller like `$scope.carousel.index = 0` [Explanation.](http://www.codelord.net/2014/05/10/understanding-angulars-magic-dont-bind-to-primitives/)
 
 ## Notes :
  - if you use IE<=9, iOS<7 or Android<4 please include the [requestAnimationFrame polyfill](https://github.com/darius/requestAnimationFrame/blob/master/requestAnimationFrame.js) in your application.

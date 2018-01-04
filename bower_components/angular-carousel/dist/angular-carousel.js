@@ -1,6 +1,6 @@
 /**
  * Angular Carousel - Mobile friendly touch carousel for AngularJS
- * @version v1.0.0 - 2015-10-09
+ * @version v1.0.2 - 2017-08-03
  * @link http://revolunet.github.com/angular-carousel
  * @author Julien Bouquillon <julien@revolunet.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -307,7 +307,14 @@ angular.module('angular-carousel').run(['$templateCache', function($templateCach
                         }
 
                         function getSlidesDOM() {
-                            return iElement[0].querySelectorAll('ul[rn-carousel] > li');
+                            var nodes = iElement[0].childNodes;
+                            var slides = [];
+                            for(var i=0; i<nodes.length ;i++){
+                                if(nodes[i].tagName === "LI"){
+                                    slides.push(nodes[i]);
+                                }
+                            }
+                            return slides;
                         }
 
                         function documentMouseUpEvent(event) {
@@ -374,7 +381,9 @@ angular.module('angular-carousel').run(['$templateCache', function($templateCach
                                 duration: options.transitionDuration,
                                 easing: options.transitionEasing,
                                 step: function(state) {
-                                    updateSlidesPosition(state.x);
+                                    if (isFinite(state.x)) {
+                                      updateSlidesPosition(state.x);
+                                    }
                                 },
                                 finish: function() {
                                     scope.$apply(function() {
@@ -449,6 +458,25 @@ angular.module('angular-carousel').run(['$templateCache', function($templateCach
                             angular.forEach(getSlidesDOM(), function(node, index) {
                                 currentSlides.push({id: index});
                             });
+                            if (iAttributes.rnCarouselHtmlSlides) {
+                                var updateParentSlides = function(value) {
+                                    slidesModel.assign(scope.$parent, value);
+                                };
+                                var slidesModel = $parse(iAttributes.rnCarouselHtmlSlides);
+                                if (angular.isFunction(slidesModel.assign)) {
+                                    /* check if this property is assignable then watch it */
+                                    scope.$watch('htmlSlides', function(newValue) {
+                                        updateParentSlides(newValue);
+                                    });
+                                    scope.$parent.$watch(slidesModel, function(newValue, oldValue) {
+                                        if (newValue !== undefined && newValue !== null) {
+                                            newValue = 0;
+                                            updateParentIndex(newValue);
+                                        }
+                                    });
+                                }
+                                scope.htmlSlides = currentSlides;
+                            }
                         }
 
                         if (iAttributes.rnCarouselControls!==undefined) {
@@ -550,6 +578,9 @@ angular.module('angular-carousel').run(['$templateCache', function($templateCach
                                 //console.log('repeatCollection', currentSlides);
                                 currentSlides = newValue;
                                 // if deepWatch ON ,manually compare objects to guess the new position
+                                if (!angular.isArray(currentSlides)) {
+                                  throw Error('the slides collection must be an Array');
+                                }
                                 if (deepWatch && angular.isArray(newValue)) {
                                     var activeElement = oldValue[scope.carouselIndex];
                                     var newIndex = getItemIndex(newValue, activeElement, scope.carouselIndex);
@@ -656,7 +687,7 @@ angular.module('angular-carousel').run(['$templateCache', function($templateCach
                             goToSlide();
                         }
 
-                        //handle orientation change
+                        // handle orientation change
                         var winEl = angular.element($window);
                         winEl.bind('orientationchange', onOrientationChange);
                         winEl.bind('resize', onOrientationChange);
