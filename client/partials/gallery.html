@@ -4,7 +4,7 @@
 	}
 </style>
 <div id="gallery">
-	<center>
+	<!-- <center>
 		<div id="gallery-page">
 			<img class="brand-name" id="brand-name-gallery" src="/images/logo1.png" alt="Beauty Bar Menu">
 		       <div ng-controller="controller" id="slides_control">
@@ -20,19 +20,19 @@
 		        </div>
 		    </div>
 		</div>
-	</center>
-	<!-- <uib-tabset active="active">
-    <uib-tab index="0" heading="MICRONEEDLING" class="tab-title">
+	</center> -->
+	<uib-tabset active="active">
+    <uib-tab index="0" heading="FACIALS" class="tab-title">
 			<center>
 				<div id="gallery-page">
-					<img class="brand-name" id="brand-name-gallery" src="/images/logo1.png" alt="Beauty Bar Menu">
+					<img class="brand-name brand-name-gallery"  src="/images/logo1.png" alt="Beauty Bar Menu">
 				       <div ng-controller="controller" id="slides_control">
 				        <div id="carousel-main" >
 				            <div uib-carousel interval="myInterval" active="activeSlide">
-				                <div uib-slide ng-repeat="microneed in microneeds" index="$index" class="carousel-box">
-				                    <img ng-src="{{microneed.image}}" style="margin:auto;" class="carousel-image">
+				                <div uib-slide ng-repeat="facial in facials" index="$index" class="carousel-box">
+				                    <img ng-src="{{facial.image}}" style="margin:auto;" class="carousel-image">
 				                    <div class="carousel-caption">
-				                        <h2>{{microneed.text}}</h2>
+				                        <h3>{{facial.text}}</h3>
 				                    </div>
 				                </div>
 				            </div>
@@ -41,17 +41,17 @@
 				</div>
 			</center>
     </uib-tab>
-    <uib-tab index="1" heading="MICRODERMABRASION" class="tab-title">
+    <uib-tab index="1" heading="BODY" class="tab-title">
 			<center>
 				<div id="gallery-page">
-					<img class="brand-name" id="brand-name-gallery" src="/images/logo1.png" alt="Beauty Bar Menu">
+					<img class="brand-name brand-name-gallery"  src="/images/logo1.png" alt="Beauty Bar Menu">
 				       <div ng-controller="controller" id="slides_control">
 				        <div id="carousel-main" >
 				            <div uib-carousel interval="myInterval" active="activeSlide">
-				                <div uib-slide ng-repeat="microdermo in microdermos" index="$index" class="carousel-box">
-				                    <img ng-src="{{microdermo.image}}" style="margin:auto;" class="carousel-image">
+				                <div uib-slide ng-repeat="body in bodies" index="$index" class="carousel-box">
+				                    <img ng-src="{{body.image}}" style="margin:auto;" class="carousel-image">
 				                    <div class="carousel-caption">
-				                        <h2>{{microdermo.text}}</h2>
+				                        <h3>{{body.text}}</h3>
 				                    </div>
 				                </div>
 				            </div>
@@ -60,18 +60,17 @@
 				</div>
 			</center>
     </uib-tab>
-    <uib-tab index="2" heading="TEENS FACIAL " class="tab-title">
+    <uib-tab index="2" heading="BEAUTY BAR" class="tab-title">
 			<center>
 				<div id="gallery-page">
-					<img class="brand-name" id="brand-name-gallery" src="/images/logo1.png" alt="Beauty Bar Menu">
+					<img class="brand-name brand-name-gallery" src="/images/logo1.png" alt="Beauty Bar Menu">
 				       <div ng-controller="controller" id="slides_control">
 					        <div id="carousel-main" >
 					            <div uib-carousel interval="myInterval" active="activeSlide">
-					                <div uib-slide ng-repeat="teen in teens" index="$index" class="carousel-box">
-					                    <img ng-src="{{teen.image}}" style="margin:auto;" class="carousel-image">
-					                    <div class="carousel-caption">
-					                        <!-- <h4>Slide {{$index+1}}</h4> -->
-					                         <!-- <h2>{{teen.text}}</h2>
+					                <div uib-slide ng-repeat="beauty in beauties" index="$index" class="carousel-box">
+					                    <img ng-src="{{beauty.image}}" style="margin:auto;" class="carousel-image">
+					                    <div class="carousel-caption">        
+					                       <h3>{{beauty.text}}</h3>
 					                    </div>
 					                </div>
 					            </div>
@@ -80,5 +79,5 @@
 					</div>
 				</center>
 	    </uib-tab>
-	</uib-tabset> -->
+	</uib-tabset>
 </div>
