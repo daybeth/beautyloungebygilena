@@ -103,6 +103,10 @@
 </html>
 <script>
 
+	 $('.navbar-collapse ul li a').click(function() {
+         always close responsive nav after click 
+        $('.navbar-toggle:visible').click();
+    });
 
 function showImage(imgName,desc,alt,title) {
   var curImage = document.getElementById('currentImg');
