@@ -42,7 +42,7 @@
 </head>
 <body>
 	<div ng-controller="controller">
-		<nav class="navbar navbar-default" role="navigation">
+		<nav class="navbar navbar-default navbar-static-top" role="navigation">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
 					<span class="sr-only">Toggle navigation</span>
@@ -102,11 +102,6 @@
 </body>
 </html>
 <script>
-
-	 $('.navbar-collapse ul li a').click(function() {
-         always close responsive nav after click 
-        $('.navbar-toggle:visible').click();
-    });
 
 function showImage(imgName,desc,alt,title) {
   var curImage = document.getElementById('currentImg');
