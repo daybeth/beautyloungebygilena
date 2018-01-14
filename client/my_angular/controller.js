@@ -36,6 +36,14 @@ app.controller('controller',['$scope', '$routeParams', function($scope,$routePar
       text: 'Microneedling'
     },
     {
+      image: '/images/ba-.jpg',
+      text: 'Microneedling 1 session'
+    },
+    {
+      image: '/images/ba-1.jpg',
+      text: 'Microneedling 1 session'
+    },
+    {
       image: '/images/ba-ultherapy.jpg',
       text: 'Ultherapy right after'
     },
@@ -58,14 +66,6 @@ app.controller('controller',['$scope', '$routeParams', function($scope,$routePar
      {
       image: '/images/ba-radiofrequency1.jpg',
       text: 'Radiofrequency'
-    },
-     {
-      image: '/images/ba-.jpg',
-      text: ''
-    },
-    {
-      image: '/images/ba-1.jpg',
-      text: ''
     },
     {
       image: '/images/ba-collagenInduction.jpg',
