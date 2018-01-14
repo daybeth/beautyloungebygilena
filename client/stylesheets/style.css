@@ -535,10 +535,12 @@ figure {
   .navbar-default .navbar-nav>li>a{
     padding: 5px;
     width: 90px;
+    text-align: left;
   }
   .navbar-default .navbar-nav .open .dropdown-menu>li>a{
-    margin-left: 0px;
-    width: 100px;
+    width: 90px;
+    font-weight: bold;
+     text-align: left;
   }
  /*  .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
     width: 100px;
@@ -629,13 +631,17 @@ figure {
   }
   .carousel-caption h3{
    font-size: 1em;
+   margin: 0px; 
+  }
+  .carousel-indicators{
+   bottom: -10px;
   }
   #service1{
     display: block;
     margin-bottom: 2%;
   }
   .service-link{
-    width: 40%;
+    width: 47%;
   }
    .service-link h3{
     font-size: 1.8em;
@@ -695,24 +701,11 @@ figure {
     margin-left: 30%;
     font-style: italic;
   }
-  #gilena-pic {
-    width:135px;
-    height:135px;
-    background-color:transparent;
-    float:left;
-    margin-left:0px;
-    margin-top:0px;
-    border:solid 3px white;
-    cursor:pointer;
-    -webkit-transition: height .50s,width .50s;
+  .gilena-pic{
+   width: 140px;
+   height: 140px;
   }
-  #gilena-pic {
-    -webkit-animation: slidedown 1s;
-    -webkit-animation-fill-mode:forwards;
-    -webkit-animation-delay:.90s;
-    position:absolute;top:-200px;left:27%;
-    z-index:99;
-  }
+
 }
 
 /*@media only screen and (max-width: 470px) {
